@@ -1,3 +1,8 @@
+# Event-Driven Data Pipeline with GCP Pub/Sub
+
+This project demonstrates an event-driven microservice pipeline built using
+Google Cloud Run, Pub/Sub messaging, and containerized Python services.
+
 # Event Driven Data Pipeline with GCP Pub/Sub
 
 This project demonstrates an event-driven microservice pipeline built on Google Cloud Platform.
@@ -20,6 +25,13 @@ Push Subscription
       v
 Subscriber Service (Cloud Run)
 ```
+## Message Flow
+
+1. A client sends a POST request to the publisher service.
+2. The publisher publishes the message to a Pub/Sub topic.
+3. Pub/Sub delivers the message to the push subscription.
+4. The subscriber service receives the message and processes it.
+
 ## Technologies
 
 Python  
@@ -69,46 +81,4 @@ Send test message
 
 Messages published by the publisher service are delivered asynchronously to the subscriber service through Pub/Sub.
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-                  [ Read 2 lines (converted from DOS format) ]
-^G Help      ^O Write Out ^F Where Is  ^K Cut       ^T Execute   ^C Location
-^X Exit      ^R Read File ^\ Replace   ^U Paste     ^J Justify   ^/ Go To Line
 
