@@ -5,7 +5,7 @@ This project demonstrates an event-driven microservice pipeline built on Google 
 The system uses Pub/Sub messaging to decouple services and Cloud Run to host containerized Python microservices.
 
 ## Architecture
-
+```
 Client Request
       |
       v
@@ -19,7 +19,7 @@ Push Subscription
       |
       v
 Subscriber Service (Cloud Run)
-
+```
 ## Technologies
 
 Python  
