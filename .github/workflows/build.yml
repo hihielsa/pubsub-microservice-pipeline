@@ -1,0 +1,17 @@
+name: Microservice CI
+
+on: [push]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Build publisher container
+        run: docker build -t publisher ./publisher
+
+      - name: Build subscriber container
+        run: docker build -t subscriber ./subscriber
